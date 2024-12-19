@@ -35,6 +35,25 @@ def private_panel(_):
         [
             InlineKeyboardButton(text=_["S_B_7"], callback_data="gib_source")
         ],
-        [InlineKeyboardButton("waifu", url=f'https://t.me/for_tying_bot?waifu')],
+        [InlineKeyboardButton("waifu", callback_data='waifu')],
     ]
     return buttons
+
+async def button(update: Update, context: CallbackContext) -> None:
+    query = update.callback_query
+    await query.answer()
+
+    if query.data == 'waifu':
+        help_text = """
+    ***❖ ʜᴇʟᴘ ᴄᴏᴍᴍᴀɴᴅs sᴇᴄᴛɪᴏɴ ❖***
+    
+***⬤ /guess ➥ ᴛᴏ ɢᴜᴇss ᴄʜᴀʀᴀᴄᴛᴇʀ (ᴏɴʟʏ ᴡᴏʀᴋs ɪɴ ɢʀᴏᴜᴘ).***
+***⬤ /fav ➥ ᴀᴅᴅ ʏᴏᴜʀ ғᴀᴠʀᴀᴛᴇ.***
+***⬤ /trade ➥ ᴛᴏ ᴛʀᴀᴅᴇ ᴄʜᴀʀᴀᴄᴛᴇʀs.***
+***⬤ /gift ➥ ɢɪᴠᴇ ᴀɴʏ ᴄʜᴀʀᴀᴄᴛᴇʀ ғʀᴏᴍ ʏᴏᴜʀ ᴄᴏʟʟᴇᴄᴛɪᴏɴ ᴛᴏ ᴀɴᴏᴛʜᴇʀ ᴜsᴇʀ (ᴏɴʟʏ ᴡᴏʀᴋs ɪɴ ɢʀᴏᴜᴘs).***
+***⬤ /collection ➥ ᴛᴏ sᴇᴇ ʏᴏᴜʀ ᴄᴏʟʟᴇᴄᴛɪᴏɴ.***
+***⬤ /topgroups ➥ sᴇᴇ ᴛᴏᴘ ɢʀᴏᴜᴘs, ᴘᴘʟ ɢᴜᴇssᴇs ᴍᴏsᴛ ɪɴ ᴛʜᴀᴛ ɢʀᴏᴜᴘs.***
+***⬤ /top ➥ ᴛᴏᴏ sᴇᴇ ᴛᴏᴘ ᴜsᴇʀs.***
+***⬤ /ctop ➥ ʏᴏᴜʀ ᴄʜᴀᴛ ᴛᴏᴘ.***
+***⬤ /changetime ➥ ᴄʜᴀɴɢᴇ ᴄʜᴀʀᴀᴄᴛᴇʀ ᴀᴘᴘᴇᴀʀ ᴛɪᴍᴇ (ᴏɴʟʏ ᴡᴏʀᴋs ɪɴ ɢʀᴏᴜᴘs).***
+   """
