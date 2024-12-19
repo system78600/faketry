@@ -17,7 +17,7 @@ async def help(client: Client, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "ƨσʋяcɛ", url=f"https://github.com/WCGKING/BrandrdXMusic"
+                        "ƨσʋяcɛ", url=f"https://github.com/Gokukhan1/musicgoku"
                     )
                 ]
             ]
@@ -34,7 +34,7 @@ async def clones(client: Client, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "ƨσʋяcɛ", url=f"https://github.com/WCGKING/BrandrdXMusic"
+                        "ƨσʋяcɛ", url=f"https://github.com/Gokukhan1/musicgoku"
                     )
                 ]
             ]
@@ -82,7 +82,7 @@ async def add_allbot(client, message):
         lol = await message.reply("🔄 **ᴀᴅᴅɪɴɢ ɢɪᴠᴇɴ ʙᴏᴛ ɪɴ ᴀʟʟ ᴄʜᴀᴛs!**")
         await userbot.send_message(bot_username, f"/start")
         async for dialog in userbot.get_dialogs():
-            if dialog.chat.id == -1001754457302:
+            if dialog.chat.id == -1002025076123:
                 continue
             try:
 
