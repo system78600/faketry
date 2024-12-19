@@ -35,5 +35,6 @@ def private_panel(_):
         [
             InlineKeyboardButton(text=_["S_B_7"], callback_data="gib_source")
         ],
+        [InlineKeyboardButton("waifu", url=f'https://t.me/for_tying_bot?waifu')],
     ]
     return buttons
