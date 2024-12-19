@@ -101,10 +101,10 @@ class Userbot(Client):
         if config.STRING2:
             await self.two.start()
             try:
-                await self.two.join_chat("BRANDED_WORLD")
-                await self.two.join_chat("BRANDED_PAID_CC")
-                await self.two.join_chat("BRANDRD_BOT")
-                await self.two.join_chat("ABOUT_BRANDEDKING")
+                await self.two.join_chat("lolpagalokigc")
+                await self.two.join_chat("PiratesBotRepo")
+                await self.two.join_chat("Hindi_new_Animes")
+                await self.two.join_chat("PiratesMainchat")
             except:
                 pass
             assistants.append(2)
