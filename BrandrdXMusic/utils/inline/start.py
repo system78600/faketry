@@ -35,6 +35,5 @@ def private_panel(_):
         [
             InlineKeyboardButton(text=_["S_B_7"], callback_data="gib_source")
         ],
-        [InlineKeyboardButton("waifu", callback_data="help_callback hb16")],
     ]
     return buttons
