@@ -71,10 +71,10 @@ class Userbot(Client):
         if config.STRING1:
             await self.one.start()
             try:
-                await self.one.join_chat("BRANDED_WORLD")
-                await self.one.join_chat("BRANDED_PAID_CC")
-                await self.one.join_chat("BRANDRD_BOT")
-                await self.one.join_chat("ABOUT_BRANDEDKING")
+                await self.one.join_chat("lolpagalokigc")
+                await self.one.join_chat("PiratesBotRepo")
+                await self.one.join_chat("Hindi_new_Animes")
+                await self.one.join_chat("PiratesMainchat")
 
             except:
                 pass
