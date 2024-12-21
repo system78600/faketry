@@ -164,6 +164,11 @@ HELP_16 = """
 ⬤ /top ➥ ᴛᴏᴏ sᴇᴇ ᴛᴏᴘ ᴜsᴇʀs.
 ⬤ /ctop ➥ ʏᴏᴜʀ ᴄʜᴀᴛ ᴛᴏᴘ.
 ⬤ /changetime ➥ ᴄʜᴀɴɢᴇ ᴄʜᴀʀᴀᴄᴛᴇʀ ᴀᴘᴘᴇᴀʀ ᴛɪᴍᴇ (ᴏɴʟʏ ᴡᴏʀᴋs ɪɴ ɢʀᴏᴜᴘs).
+⬤ /waifustat ➥ TO CHECK YOUR WAIFU STATS .
+⬤ /sell ➥ TO SELL YOUR CHARACTER .
+⬤ /bonus ➥ TO USE TO FREE WAIFU CHARECTOR.
+⬤ /daily ➥ collect your daily bonus.
+--------------MORE--INFO--THAN--OPEN--advance-----------.
    """
 
 HELP_17 = """
