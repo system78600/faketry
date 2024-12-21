@@ -1,7 +1,6 @@
 from pyrogram import filters
 from pyrogram.types import *
 from BrandrdXMusic import app
-from pyrogram import Translator
 
 # .......
 
