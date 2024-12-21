@@ -82,7 +82,7 @@ async def broadcast(client: Client, message: Message):
     user = message.from_user
     is_pro_user = await is_pro(user.id)
     if not is_pro_user:
-        return await message.reply_text(f"{user.mention}, you don't have pro access for paid broadcast.")
+        return await message.reply_text(f"{user.mention}, you don't have to access connect [GOKU](https://t.me/xeno_kakarot) and buy it.")
     if IS_BROADCASTING:
         return await message.reply_text("A broadcast is already in progress. Please wait until it finishes.")
     broadcast_result = await log_pro_broadcast_usage(user.id)
