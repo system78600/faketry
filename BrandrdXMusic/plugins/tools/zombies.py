@@ -1,4 +1,4 @@
-from pyrogram.types import Message
+"""from pyrogram.types import Message
 from pyrogram import enums
 from pyrogram.enums import ChatMemberStatus
 from pyrogram.errors import FloodWait
@@ -178,4 +178,4 @@ async def bots(client, message):
         await asyncio.sleep(e.value)
 
 
-# ------------------------------------------------------------------------------- #
+# ------------------------------------------------------------------------------- #"""
