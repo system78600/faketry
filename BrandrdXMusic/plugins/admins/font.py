@@ -2408,7 +2408,7 @@ async def style_buttons(c, m, cb=False):
     ]
     if not cb:
         await m.reply_text(
-            text=m.text.split(None, 1)[1],
+            text= m.text.split(None, 1)[1],
             reply_markup=InlineKeyboardMarkup(buttons),
             quote=True,
         )
