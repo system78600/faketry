@@ -1,17 +1,13 @@
-from BrandrdXMusic import app
 from pyrogram import filters
-import nekos
+from BrandrdXMusic import app
+from BrandrdXMusic.utils.https import fetch  # Import the fetch function
 
+url_sfw = "https://api.waifu.pics/sfw/slap"
 
 @app.on_message(filters.command("slap"))
 async def slap(client, message):
-    try:
-        if message.reply_to_message:
-            await message.reply_video(
-                nekos.img("slap"),
-                caption=f"{message.from_user.mention} sʟᴀᴘᴘᴇᴅ {message.reply_to_message.from_user.mention}",
-            )
-        else:
-            await message.reply_video(nekos.img("slap"))
-    except Exception as e:
-        await message.reply_text(f"Error: {e}")
+    # Fetch a random slap gif
+    response = await fetch.get(url_sfw)
+    result = response.json()  # Parse the JSON response
+    img = result["url"]
+    await message.reply_animation(img)
