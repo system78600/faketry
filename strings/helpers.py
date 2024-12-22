@@ -190,7 +190,7 @@ SIMPLE DELETE ACCOUNT KICKED FOR YOUR GROUP
 ⬤ /zombies ➥ DELETE ACCOUNT KICK FOR YOUR GROUP
 """
 
-HELP_19 = """
+HELP_20 = """
 ғᴏʀᴄᴇ ꜱᴜʙꜱᴄʀɪʙᴇ:
 
    •➥ BoT ᴄᴀɴ ᴍᴜᴛᴇ ᴍᴇᴍʙᴇʀꜱ ᴡʜᴏ ᴀʀᴇ ɴᴏᴛ ꜱᴜʙꜱᴄʀɪʙᴇᴅ ʏᴏᴜʀ ᴄʜᴀɴɴᴇʟ ᴜɴᴛɪʟ ᴛʜᴇʏ ꜱᴜʙꜱᴄʀɪʙᴇ
