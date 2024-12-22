@@ -1,11 +1,11 @@
 from pyrogram import filters
 from pyrogram.types import *
 from BrandrdXMusic import app
-from gpytranslate import SyncTranslator
+from gpytranslate import Translator
 
 # .......
 
-trans = SyncTranslator()
+trans = Translator()
 
 # ......
 
