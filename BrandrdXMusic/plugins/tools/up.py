@@ -54,19 +54,13 @@ async def upscale_image(client, message):
 
 
 
-__mod_name__ = "Aɪ"
+__MODULE__ = "Aɪ"
 
-__help__ ="""
+__HELP__ ="""
 
     ➢ /upscale*:* Tᴏ ɪɴᴄʀᴇᴀꜱᴇꜱ ᴛʜᴇ Qᴜᴀʟɪᴛʏ ᴏꜰ ᴀɴ ɪᴍᴀɢᴇ ᴛʜʀᴏᴜɢʜ Aɪ.
 
     ➢ /image *:* to auto draw photo 
 """
 
-
-from Exon.modules.language import gs
-
-
-def get_help(chat):
-    return gs(chat, "ai_help")
 
