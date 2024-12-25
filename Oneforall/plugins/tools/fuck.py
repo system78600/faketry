@@ -2,8 +2,8 @@ import random
 
 from pyrogram import Client, filters
 from pyrogram.types import Message
-from VIPMUSIC import app
-from VIPMUSIC.misc import SUDOERS
+from Oneforall import app
+from Oneforall.misc import SUDOERS
 
 PORM = [
     "https://telegra.ph/file/9bcc076fd81dfe3feb291.mp4",
