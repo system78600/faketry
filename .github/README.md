@@ -66,7 +66,7 @@
    ```
 5. **Clone the Repository**
    ```bash
-   git clone https://github.com/WCGKING/BrandrdXMusic && cd BrandrdXMusic
+   git clone https://github.com/Gokukhan1/musicgoku && cd BrandrdXMusic
    ```
 6. **Install Requirements**
    ```bash
@@ -98,11 +98,11 @@
 </h3>
 
 <p align="center">
-<a href="https://t.me/BRANDED_WORLD"><img src="https://img.shields.io/badge/-Support%20Group-blue.svg?style=for-the-badge&logo=Telegram"></a>
+<a href="https://t.me/PiratesMainchat"><img src="https://img.shields.io/badge/-Support%20Group-blue.svg?style=for-the-badge&logo=Telegram"></a>
 </p>
 
 <p align="center">
 <a href="https://t.me/PiratesMainchat"><img src="https://img.shields.io/badge/-Support%20Channel-blue.svg?style=for-the-badge&logo=Telegram"></a>
 </p>
 
-- <b> _sᴩᴇᴄɪᴀʟ ᴛʜᴀɴᴋs ᴛᴏ [ᴛᴇᴀᴍ pirate](https://github.com/Gokukhan1) ғᴏʀ [MUSIC X WAIFU BOT](https://t.me/for_tying_bot)_</b>
+- <b> _sᴩᴇᴄɪᴀʟ ᴛʜᴀɴᴋs ᴛᴏ [ᴛᴇᴀᴍ pirate](https://github.com/Gokukhan1) ғᴏʀ [MUSIC X WAIFU BOT](https://t.me/One_for_all_rebot)_</b>
