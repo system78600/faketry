@@ -74,7 +74,7 @@ PORM = [
     & SUDOERS
 )
 async def help(client: Client, message: Message):
-    await message.reply_text(
-        text=random.choice(PORM),
+    await message.reply_video(
+        video=random.choice(PORM),
     )
     
