@@ -1,4 +1,4 @@
-"""from logging import getLogger
+from logging import getLogger
 
 from PIL import Image, ImageChops, ImageDraw, ImageEnhance, ImageFont
 from pyrogram import enums, filters
@@ -214,7 +214,7 @@ async def greet_new_member(_, member: ChatMemberUpdated):
                 member.chat.id,
                 photo=welcomeimg,
                 caption=f"""
-"""**❅────✦ ᴡᴇʟᴄᴏᴍᴇ ✦────❅**
+**❅────✦ ᴡᴇʟᴄᴏᴍᴇ ✦────❅**
 
 ▰▰▰▰▰▰▰▰▰▰▰▰▰
 **➻ ɴᴀᴍᴇ »** {user.mention}
@@ -225,7 +225,7 @@ async def greet_new_member(_, member: ChatMemberUpdated):
 
 **❅─────✧❅✦❅✧─────❅**
 """,
-                """reply_markup=InlineKeyboardMarkup(
+                reply_markup=InlineKeyboardMarkup(
                     [
                         [InlineKeyboardButton(button_text, url=deep_link)],
                         [InlineKeyboardButton(text=add_button_text, url=add_link)],
@@ -233,4 +233,4 @@ async def greet_new_member(_, member: ChatMemberUpdated):
                 ),
             )
         except Exception as e:
-            LOGGER.error(e)"""
+            LOGGER.error(e)
