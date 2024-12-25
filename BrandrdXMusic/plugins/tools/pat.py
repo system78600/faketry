@@ -10,4 +10,4 @@ async def slap(client, message):
     response = await fetch.get(url_sfw)
     result = response.json()  # Parse the JSON response
     img = result["url"]
-    await message.reply_animation(img)
+    await message.reply_animation(img)"""
