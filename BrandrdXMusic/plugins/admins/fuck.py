@@ -2,7 +2,7 @@ from pyrogram import filters
 from BrandrdXMusic import app
 from BrandrdXMusic.utils.https import fetch  # Import the fetch function
 
-url_sfw = "https://api.waifu.pics/sfw/fuck"
+url_sfw = "https://api.waifu.pics/sfw/sex"
 
 @app.on_message(filters.command("fuck"))
 async def slap(client, message):
