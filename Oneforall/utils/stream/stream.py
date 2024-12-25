@@ -7,22 +7,6 @@ from pyrogram.types import InlineKeyboardMarkup
 import config
 from Oneforall import YouTube, app
 from Oneforall.core.call import Hotty
-from Oneforall.utils import seconds_to_min, time_to_seconds
-from Oneforall.utils.database import (
-    add_served_chat,
-    add_served_user,
-    blacklisted_chats,
-    get_lang,
-    is_banned_user,
-    is_on_off,
-)
-from Oneforall.utils.inline import (
-    botplaylist_markup,
-    livestream_markup,
-    playlist_markup,
-    slider_markup,
-    track_markup,
-)
 
 # Define a dictionary to track the last message timestamp for each user
 user_last_message_time = {}
@@ -44,8 +28,6 @@ from Oneforall.utils.exceptions import AssistantErr
 from Oneforall.utils.inline import (
     aq_markup,
     close_markup,
-    panel_markup_4,
-    queuemarkup,
     stream_markup,
     stream_markup2,
 )

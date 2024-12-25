@@ -9,13 +9,7 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 from config import OWNER_ID
 from Oneforall import app
 from Oneforall.core.mongo import mongodb
-from Oneforall.utils.database import (
-    get_active_chats,
-    get_authuser_names,
-    get_client,
-    get_served_chats,
-    get_served_users,
-)
+from Oneforall.utils.database import get_served_chats, get_served_users
 
 pros = mongodb.pro
 protimes = mongodb.protime

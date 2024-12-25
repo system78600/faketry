@@ -10,7 +10,6 @@ from telegraph import upload_file
 
 # BOT FILE NAME
 from Oneforall import app as app
-from Oneforall.mongo.couples_db import _get_image, get_couple
 
 POLICE = [
     [

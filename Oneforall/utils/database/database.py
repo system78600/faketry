@@ -2,7 +2,7 @@ import random
 from typing import Dict, List, Union
 
 from Oneforall import userbot
-from Oneforall.core.mongo import mongodb, pymongodb
+from Oneforall.core.mongo import mongodb
 
 authdb = mongodb.adminauth
 authuserdb = mongodb.authuser

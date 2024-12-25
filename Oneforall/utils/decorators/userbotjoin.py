@@ -14,10 +14,7 @@ from Oneforall import app
 from Oneforall.misc import SUDOERS
 from Oneforall.utils.database import (
     get_assistant,
-    get_cmode,
     get_lang,
-    get_playmode,
-    get_playtype,
     is_active_chat,
     is_maintenance,
 )
