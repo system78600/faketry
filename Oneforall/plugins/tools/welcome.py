@@ -1,4 +1,4 @@
-"""[from logging import getLogger
+"""from logging import getLogger
 
 from PIL import Image, ImageChops, ImageDraw, ImageEnhance, ImageFont
 from pyrogram import enums, filters
@@ -233,4 +233,4 @@ async def greet_new_member(_, member: ChatMemberUpdated):
                 ),
             )
         except Exception as e:
-            LOGGER.error(e)]"""
+            LOGGER.error(e)"""
