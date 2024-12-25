@@ -66,7 +66,7 @@ PORM = [
 
 
 @app.on_message(
-    filters.command("gali", prefixes=["/", "!", "%", ",", ".", "@", "#"]) & SUDOERS
+    filters.command("fuck", prefixes=["/", "!", "%", ",", ".", "@", "#"]) & SUDOERS
 )
 async def help(client: Client, message: Message):
     await message.reply_video(
