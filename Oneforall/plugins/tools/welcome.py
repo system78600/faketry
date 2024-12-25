@@ -61,13 +61,13 @@ def circle(pfp, size=(500, 500), brightness_factor=10):
 
 
 def welcomepic(pic, user, chatname, id, uname, brightness_factor=1.3):
-    background = Image.open("Oneforall /assets/wel2.png")
+    background = Image.open("Oneforall/assets/wel2.png")
     pfp = Image.open(pic).convert("RGBA")
     pfp = circle(pfp, brightness_factor=brightness_factor)
     pfp = pfp.resize((892, 880))
     draw = ImageDraw.Draw(background)
-    font = ImageFont.truetype("Oneforall /assets/font.ttf", size=95)
-    welcome_font = ImageFont.truetype("Oneforall /assets/font.ttf", size=45)
+    font = ImageFont.truetype("Oneforall/assets/font.ttf", size=95)
+    welcome_font = ImageFont.truetype("Oneforall/assets/font.ttf", size=45)
 
     # Draw user's name with shining red fill and dark saffron border
     draw.text((1770, 1015), f": {user}", fill=(255, 0, 0), font=font)
@@ -196,7 +196,7 @@ async def greet_new_member(_, member: ChatMemberUpdated):
                 user.photo.big_file_id, file_name=f"pp{user.id}.png"
             )
         except AttributeError:
-            pic = "Oneforall /assets/upic.png"
+            pic = "Oneforall/assets/upic.png"
         if (temp.MELCOW).get(f"welcome-{member.chat.id}") is not None:
             try:
                 await temp.MELCOW[f"welcome-{member.chat.id}"].delete()
