@@ -1,9 +1,9 @@
 from pyrogram import filters
 from pyrogram.types import Message
 
-from Oneforall  import app
-from Oneforall .misc import SUDOERS
-from Oneforall .utils.database import autoend_off, autoend_on
+from Oneforall import app
+from Oneforall.misc import SUDOERS
+from Oneforall.utils.database import autoend_off, autoend_on
 
 
 @app.on_message(filters.command("autoend") & SUDOERS)

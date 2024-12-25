@@ -1,5 +1,5 @@
-import re
 import os
+import re
 from os import getenv
 
 from dotenv import load_dotenv
@@ -56,7 +56,9 @@ AUTO_GCAST_MSG = getenv("AUTO_GCAST_MSG", "")
 
 # Get this credentials from https://developer.spotify.com/dashboard
 SPOTIFY_CLIENT_ID = getenv("SPOTIFY_CLIENT_ID", "bcfe26b0ebc3428882a0b5fb3e872473")
-SPOTIFY_CLIENT_SECRET = getenv("SPOTIFY_CLIENT_SECRET", "907c6a054c214005aeae1fd752273cc4")
+SPOTIFY_CLIENT_SECRET = getenv(
+    "SPOTIFY_CLIENT_SECRET", "907c6a054c214005aeae1fd752273cc4"
+)
 
 
 # Maximum limit for fetching playlist's track from youtube, spotify, apple links.
@@ -73,7 +75,7 @@ TG_VIDEO_FILESIZE_LIMIT = int(getenv("TG_VIDEO_FILESIZE_LIMIT", 1073741824))
 
 
 # Get your pyrogram v2 session from @BRANDEDSTRINGSESSION_BOT on Telegram
-STRING1 = getenv("STRING_SESSION",  None)
+STRING1 = getenv("STRING_SESSION", None)
 STRING2 = getenv("STRING_SESSION2", None)
 STRING3 = getenv("STRING_SESSION3", None)
 STRING4 = getenv("STRING_SESSION4", None)
@@ -88,12 +90,8 @@ autoclean = []
 confirmer = {}
 
 
-START_IMG_URL = getenv(
-    "START_IMG_URL", "https://files.catbox.moe/t0t93h.jpg"
-)
-PING_IMG_URL = getenv(
-    "PING_IMG_URL", "https://files.catbox.moe/lbl62s.jpg"
-)
+START_IMG_URL = getenv("START_IMG_URL", "https://files.catbox.moe/t0t93h.jpg")
+PING_IMG_URL = getenv("PING_IMG_URL", "https://files.catbox.moe/lbl62s.jpg")
 PLAYLIST_IMG_URL = "https://files.catbox.moe/ka4lzo.jpg"
 STATS_IMG_URL = "https://files.catbox.moe/o82ph9.jpg"
 TELEGRAM_AUDIO_URL = "https://files.catbox.moe/ka4lzo.jpg"

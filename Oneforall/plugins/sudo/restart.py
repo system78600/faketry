@@ -10,15 +10,14 @@ from git.exc import GitCommandError, InvalidGitRepositoryError
 from pyrogram import filters
 
 import config
-from Oneforall  import app
-from Oneforall .misc import HAPP, SUDOERS, XCB
-from Oneforall .utils.database import (
+from Oneforall import app
+from Oneforall.misc import HAPP, SUDOERS, XCB
+from Oneforall.utils.database import (
     get_active_chats,
     remove_active_chat,
     remove_active_video_chat,
 )
-from Oneforall .utils.decorators.language import language
-from Oneforall .utils.pastebin import HottyBin
+from Oneforall.utils.decorators.language import language
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
@@ -27,7 +26,12 @@ async def is_heroku():
     return "heroku" in socket.getfqdn()
 
 
-@app.on_message(filters.command(["getlog", "logs", "getlogs"], prefixes=["/", "!", "%", ",", "", ".", "@", "#"]) & SUDOERS)
+@app.on_message(
+    filters.command(
+        ["getlog", "logs", "getlogs"], prefixes=["/", "!", "%", ",", "", ".", "@", "#"]
+    )
+    & SUDOERS
+)
 @language
 async def log_(client, message, _):
     try:
@@ -36,7 +40,12 @@ async def log_(client, message, _):
         await message.reply_text(_["server_1"])
 
 
-@app.on_message(filters.command(["update", "gitpull"], prefixes=["/", "!", "%", ",", "", ".", "@", "#"]) & SUDOERS)
+@app.on_message(
+    filters.command(
+        ["update", "gitpull"], prefixes=["/", "!", "%", ",", "", ".", "@", "#"]
+    )
+    & SUDOERS
+)
 @language
 async def update_(client, message, _):
     if await is_heroku():

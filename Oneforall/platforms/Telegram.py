@@ -6,8 +6,8 @@ from typing import Union
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Voice
 
 import config
-from Oneforall  import app
-from Oneforall .utils.formatters import (
+from Oneforall import app
+from Oneforall.utils.formatters import (
     check_duration,
     convert_bytes,
     get_readable_time,

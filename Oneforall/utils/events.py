@@ -1,8 +1,6 @@
-import inspect
-import re
-from pathlib import Path
 from telethon import events
-from Oneforall  import telethn
+
+from Oneforall import telethn
 
 
 def register(**args):

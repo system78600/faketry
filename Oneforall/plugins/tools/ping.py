@@ -3,12 +3,12 @@ from datetime import datetime
 from pyrogram import filters
 from pyrogram.types import Message
 
-from Oneforall  import app
-from Oneforall .core.call import Hotty
-from Oneforall .utils import bot_sys_stats
-from Oneforall .utils.decorators.language import language
-from Oneforall .utils.inline import supp_markup
 from config import BANNED_USERS, PING_IMG_URL
+from Oneforall import app
+from Oneforall.core.call import Hotty
+from Oneforall.utils import bot_sys_stats
+from Oneforall.utils.decorators.language import language
+from Oneforall.utils.inline import supp_markup
 
 
 @app.on_message(filters.command(["ping", "alive"]) & ~BANNED_USERS)

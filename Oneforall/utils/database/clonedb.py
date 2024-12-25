@@ -1,5 +1,4 @@
-from Oneforall .core.mongo import mongodb, pymongodb
-from typing import Dict, List, Union
+from Oneforall.core.mongo import mongodb, pymongodb
 
 cloneownerdb = mongodb.cloneownerdb
 clonebotdb = pymongodb.clonebotdb

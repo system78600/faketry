@@ -1,7 +1,7 @@
-from pyrogram import filters
-from pyrogram.types import *
-from Oneforall  import app
 from gpytranslate import Translator
+from pyrogram import filters
+
+from Oneforall import app
 
 # .......
 
@@ -34,4 +34,3 @@ async def translate(_, message) -> None:
     translation = await trans(to_translate, sourcelang=source, targetlang=dest)
     reply = f"ᴛʀᴀɴsʟᴀᴛᴇᴅ ғʀᴏᴍ {source} to {dest}:\n" f"{translation.text}"
     await message.reply_text(reply)
-  

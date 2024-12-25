@@ -5,7 +5,7 @@ import heroku3
 from pyrogram import filters
 
 import config
-from Oneforall .core.mongo import mongodb
+from Oneforall.core.mongo import mongodb
 
 from .logging import LOGGER
 

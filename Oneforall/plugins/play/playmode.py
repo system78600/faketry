@@ -1,11 +1,11 @@
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardMarkup, Message
 
-from Oneforall  import app
-from Oneforall .utils.database import get_playmode, get_playtype, is_nonadmin_chat
-from Oneforall .utils.decorators import language
-from Oneforall .utils.inline.settings import playmode_users_markup
 from config import BANNED_USERS
+from Oneforall import app
+from Oneforall.utils.database import get_playmode, get_playtype, is_nonadmin_chat
+from Oneforall.utils.decorators import language
+from Oneforall.utils.inline.settings import playmode_users_markup
 
 
 @app.on_message(filters.command(["playmode", "mode"]) & filters.group & ~BANNED_USERS)

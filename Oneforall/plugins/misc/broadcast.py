@@ -4,18 +4,18 @@ from pyrogram import filters
 from pyrogram.enums import ChatMembersFilter
 from pyrogram.errors import FloodWait
 
-from Oneforall  import app
-from Oneforall .misc import SUDOERS
-from Oneforall .utils.database import (
+from config import adminlist
+from Oneforall import app
+from Oneforall.misc import SUDOERS
+from Oneforall.utils.database import (
     get_active_chats,
     get_authuser_names,
     get_client,
     get_served_chats,
     get_served_users,
 )
-from Oneforall .utils.decorators.language import language
-from Oneforall .utils.formatters import alpha_to_int
-from config import adminlist
+from Oneforall.utils.decorators.language import language
+from Oneforall.utils.formatters import alpha_to_int
 
 IS_BROADCASTING = False
 
@@ -124,10 +124,10 @@ async def braodcast_message(client, message, _):
             client = await get_client(num)
             async for dialog in client.get_dialogs():
                 try:
-                    await client.forward_messages(
-                        dialog.chat.id, y, x
-                    ) if message.reply_to_message else await client.send_message(
-                        dialog.chat.id, text=query
+                    (
+                        await client.forward_messages(dialog.chat.id, y, x)
+                        if message.reply_to_message
+                        else await client.send_message(dialog.chat.id, text=query)
                     )
                     sent += 1
                     await asyncio.sleep(3)

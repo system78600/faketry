@@ -1,16 +1,16 @@
 import asyncio
 import importlib
-from sys import argv
+
 from pyrogram import idle
 from pytgcalls.exceptions import NoActiveGroupCall
 
 import config
-from Oneforall  import LOGGER, app, userbot
-from Oneforall .core.call import Hotty
-from Oneforall .misc import sudo
-from Oneforall .plugins import ALL_MODULES
-from Oneforall .utils.database import get_banned_users, get_gbanned
 from config import BANNED_USERS
+from Oneforall import LOGGER, app, userbot
+from Oneforall.core.call import Hotty
+from Oneforall.misc import sudo
+from Oneforall.plugins import ALL_MODULES
+from Oneforall.utils.database import get_banned_users, get_gbanned
 
 
 async def init():

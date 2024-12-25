@@ -3,9 +3,9 @@ import asyncio
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 
-from Oneforall  import app
-from Oneforall .mongo.afkdb import LOGGERS as OWNERS
-from Oneforall .utils.database import add_served_chat, get_assistant
+from Oneforall import app
+from Oneforall.mongo.afkdb import LOGGERS as OWNERS
+from Oneforall.utils.database import add_served_chat, get_assistant
 
 
 @app.on_message(filters.command("tubetichodhai"))

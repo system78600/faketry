@@ -1,7 +1,7 @@
 import asyncio
 
-from Oneforall .misc import db
-from Oneforall .utils.database import get_active_chats, is_music_playing
+from Oneforall.misc import db
+from Oneforall.utils.database import get_active_chats, is_music_playing
 
 
 async def timer():

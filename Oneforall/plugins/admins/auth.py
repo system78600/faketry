@@ -1,17 +1,17 @@
 from pyrogram import filters
 from pyrogram.types import Message
 
-from Oneforall  import app
-from Oneforall .utils import extract_user, int_to_alpha
-from Oneforall .utils.database import (
+from config import BANNED_USERS, adminlist
+from Oneforall import app
+from Oneforall.utils import extract_user, int_to_alpha
+from Oneforall.utils.database import (
     delete_authuser,
     get_authuser,
     get_authuser_names,
     save_authuser,
 )
-from Oneforall .utils.decorators import AdminActual, language
-from Oneforall .utils.inline import close_markup
-from config import BANNED_USERS, adminlist
+from Oneforall.utils.decorators import AdminActual, language
+from Oneforall.utils.inline import close_markup
 
 
 @app.on_message(filters.command("auth") & filters.group & ~BANNED_USERS)

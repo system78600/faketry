@@ -1,6 +1,6 @@
-import socket,requests
-from asyncio import get_running_loop
-from functools import partial
+import socket
+
+import requests
 
 
 def _netcat(host, port, content):
@@ -17,8 +17,12 @@ def _netcat(host, port, content):
 
 
 async def HottyBin(content):
-    url ="https://pastebin.com/api/api_post.php"
-    data = {"api_dev_key":"9Rfu50iV5l3EuRWATw7EDLuC37RED-C4","api_paste_code": content,"api_option": "paste"}
+    url = "https://pastebin.com/api/api_post.php"
+    data = {
+        "api_dev_key": "9Rfu50iV5l3EuRWATw7EDLuC37RED-C4",
+        "api_paste_code": content,
+        "api_option": "paste",
+    }
     response = requests.post(url, data=data)
-    link=response.text
+    link = response.text
     return link

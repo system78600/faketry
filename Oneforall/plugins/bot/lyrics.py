@@ -3,13 +3,11 @@ import re
 import string
 
 import lyricsgenius as lg
-from pyrogram import Client, filters
+from pyrogram import filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 
-from Oneforall  import app
-from Oneforall .utils.decorators.language import language
-
 from config import BANNED_USERS, lyrical
+from Oneforall import app
 
 api_key = "fcXGwudRZTE8zdMOYKNMoRGIWfBjca_4s5wF5keHeCTd68yURmceO4MGhAbyx-qp"
 y = lg.Genius(
@@ -20,6 +18,7 @@ y = lg.Genius(
 )
 y.verbose = False
 
+
 @app.on_message(filters.command(["lyrics"]) & ~BANNED_USERS)
 async def lrsearch(client, message: Message):
     if len(message.command) < 2:
@@ -27,7 +26,7 @@ async def lrsearch(client, message: Message):
 
     title = message.text.split(None, 1)[1]
     m = await message.reply_text(_["lyrics_2"])
-    
+
     S = y.search_song(title, get_full_info=False)
     if S is None:
         return await m.edit(_["lyrics_3"].format(title))
@@ -48,5 +47,5 @@ async def lrsearch(client, message: Message):
             ]
         ]
     )
-    
+
     await m.edit(_["lyrics_4"], reply_markup=upl)

@@ -2,10 +2,10 @@ from pykeyboard import InlineKeyboard
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardButton, Message
 
-from Oneforall  import app
-from Oneforall .utils.database import get_lang, set_lang
-from Oneforall .utils.decorators import (ActualAdminCB, language, languageCB)
 from config import BANNED_USERS
+from Oneforall import app
+from Oneforall.utils.database import get_lang, set_lang
+from Oneforall.utils.decorators import ActualAdminCB, language, languageCB
 from strings import get_string, languages_present
 
 

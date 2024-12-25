@@ -1,9 +1,9 @@
 from pyrogram import filters
 
-from Oneforall  import app
-from Oneforall .misc import SUDOERS
-from Oneforall .utils.database import add_off, add_on
-from Oneforall .utils.decorators.language import language
+from Oneforall import app
+from Oneforall.misc import SUDOERS
+from Oneforall.utils.database import add_off, add_on
+from Oneforall.utils.decorators.language import language
 
 
 @app.on_message(filters.command(["logger"]) & SUDOERS)
@@ -21,6 +21,7 @@ async def logger(client, message, _):
         await message.reply_text(_["log_3"])
     else:
         await message.reply_text(usage)
+
 
 @app.on_message(filters.command(["cookies"]) & SUDOERS)
 @language

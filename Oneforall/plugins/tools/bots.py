@@ -3,7 +3,7 @@ import asyncio
 from pyrogram import enums, filters
 from pyrogram.errors import FloodWait
 
-from Oneforall  import app
+from Oneforall import app
 
 
 @app.on_message(filters.command("bots") & filters.group)

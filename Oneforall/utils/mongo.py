@@ -8,15 +8,12 @@ B̳̿͟͞R̳̿͟͞A̳̿͟͞N̳̿͟͞D̳̿͟͞E̳̿͟͞D̳̿͟͞ K̳̿͟͞I̿͟͞
 B̳̿͟͞R̳̿͟͞A̳̿͟͞N̳̿͟͞D̳̿͟͞E̳̿͟͞D̳̿͟͞ K̳̿͟͞I̳̿͟͞N̳̿͟͞G̳̿͟͞ B̳̿͟͞R̳̿͟͞A̳̿͟͞N̳̿͟͞D̳̿͟͞E̳̿͟͞D̳̿͟͞ K̳̿͟͞I̳̿͟͞N̳̿͟͞G̳̿͟͞ B̳̿͟͞R̳̿͟͞A̳̿͟͞N̳̿͟͞D̳̿͟͞E̳̿͟͞D̳̿͟͞ K̳̿͟͞I̳̿͟͞N̳̿͟͞G̳̿͟͞ B̳̿͟͞R̳̿͟͞A̳̿͟͞N̳̿͟͞D̳̿͟͞E̳̿͟͞D̳̿͟͞ K̳̿͟͞I̳̿͟͞N̳̿͟͞G̳̿͟͞ B̳̿͟͞R̳̿͟͞A̳̿͟͞N̳̿͟͞D̳̿͟͞E̳̿͟͞D̳̿͟͞ K̳̿͟͞I̳̿͟͞N̳̿͟͞G̳̿͟͞ B̳̿͟͞R̳̿͟͞A̳̿͟͞N̳̿͟͞D̳̿͟͞E̳̿͟͞D̳̿͟͞ K̳̿͟͞I̳̿͟͞N̳̿͟͞G̳̿͟͞
 ────────────────────────────────────────────────────────────────────────**"""
 
-
-from typing import Dict, Union
-
 from motor.motor_asyncio import AsyncIOMotorClient as MongoCli
 
 from config import MONGO_DB_URI
 
 mongo = MongoCli(MONGO_DB_URI)
-db = mongo.Oneforall 
+db = mongo.Oneforall
 
 coupledb = db.couple
 
@@ -38,6 +35,7 @@ async def _get_lovers(cid: int):
         lovers = {}
     return lovers
 
+
 async def _get_image(cid: int):
     lovers = await coupledb.find_one({"chat_id": cid})
     if lovers:
@@ -45,6 +43,7 @@ async def _get_image(cid: int):
     else:
         lovers = {}
     return lovers
+
 
 async def get_couple(cid: int, date: str):
     lovers = await _get_lovers(cid)

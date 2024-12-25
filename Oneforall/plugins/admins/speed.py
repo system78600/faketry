@@ -1,14 +1,14 @@
 from pyrogram import filters
 from pyrogram.types import Message
 
-from Oneforall  import app
-from Oneforall .core.call import Hotty
-from Oneforall .misc import SUDOERS, db
-from Oneforall .utils import AdminRightsCheck
-from Oneforall .utils.database import is_active_chat, is_nonadmin_chat
-from Oneforall .utils.decorators.language import languageCB
-from Oneforall .utils.inline import close_markup, speed_markup
 from config import BANNED_USERS, adminlist
+from Oneforall import app
+from Oneforall.core.call import Hotty
+from Oneforall.misc import SUDOERS, db
+from Oneforall.utils import AdminRightsCheck
+from Oneforall.utils.database import is_active_chat, is_nonadmin_chat
+from Oneforall.utils.decorators.language import languageCB
+from Oneforall.utils.inline import close_markup, speed_markup
 
 checker = []
 

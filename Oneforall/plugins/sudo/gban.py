@@ -4,10 +4,11 @@ from pyrogram import filters
 from pyrogram.errors import FloodWait
 from pyrogram.types import Message
 
-from Oneforall  import app
-from Oneforall .misc import SUDOERS
-from Oneforall .utils import get_readable_time
-from Oneforall .utils.database import (
+from config import BANNED_USERS
+from Oneforall import app
+from Oneforall.misc import SUDOERS
+from Oneforall.utils import get_readable_time
+from Oneforall.utils.database import (
     add_banned_user,
     get_banned_count,
     get_banned_users,
@@ -15,9 +16,8 @@ from Oneforall .utils.database import (
     is_banned_user,
     remove_banned_user,
 )
-from Oneforall .utils.decorators.language import language
-from Oneforall .utils.extraction import extract_user
-from config import BANNED_USERS
+from Oneforall.utils.decorators.language import language
+from Oneforall.utils.extraction import extract_user
 
 
 @app.on_message(filters.command(["gban", "globalban"]) & SUDOERS)

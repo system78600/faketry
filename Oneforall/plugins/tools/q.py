@@ -4,7 +4,7 @@ from httpx import AsyncClient, Timeout
 from pyrogram import filters
 from pyrogram.types import Message
 
-from Oneforall  import app
+from Oneforall import app
 
 fetch = AsyncClient(
     http2=True,

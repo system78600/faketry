@@ -1,5 +1,5 @@
-from Oneforall  import app
-from Oneforall .utils.database import get_cmode
+from Oneforall import app
+from Oneforall.utils.database import get_cmode
 
 
 async def get_channeplayCB(_, command, CallbackQuery):

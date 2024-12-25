@@ -1,11 +1,11 @@
 from pyrogram import filters
 from pyrogram.types import Message
 
-from Oneforall  import app
-from Oneforall .misc import SUDOERS
-from Oneforall .utils.database import blacklist_chat, blacklisted_chats, whitelist_chat
-from Oneforall .utils.decorators.language import language
 from config import BANNED_USERS
+from Oneforall import app
+from Oneforall.misc import SUDOERS
+from Oneforall.utils.database import blacklist_chat, blacklisted_chats, whitelist_chat
+from Oneforall.utils.decorators.language import language
 
 
 @app.on_message(filters.command(["blchat", "blacklistchat"]) & SUDOERS)

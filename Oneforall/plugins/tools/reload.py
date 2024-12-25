@@ -5,13 +5,13 @@ from pyrogram import filters
 from pyrogram.enums import ChatMembersFilter
 from pyrogram.types import CallbackQuery, Message
 
-from Oneforall  import app
-from Oneforall .core.call import Hotty
-from Oneforall .misc import db
-from Oneforall .utils.database import get_assistant, get_authuser_names, get_cmode
-from Oneforall .utils.decorators import ActualAdminCB, AdminActual, language
-from Oneforall .utils.formatters import alpha_to_int, get_readable_time
 from config import BANNED_USERS, adminlist, lyrical
+from Oneforall import app
+from Oneforall.core.call import Hotty
+from Oneforall.misc import db
+from Oneforall.utils.database import get_assistant, get_authuser_names, get_cmode
+from Oneforall.utils.decorators import ActualAdminCB, AdminActual, language
+from Oneforall.utils.formatters import alpha_to_int, get_readable_time
 
 rel = {}
 

@@ -4,15 +4,15 @@ from datetime import datetime
 from pyrogram.enums import ChatType
 
 import config
-from Oneforall  import app
-from Oneforall .core.call import Hotty, autoend
-from Oneforall .utils.database import get_client, is_active_chat, is_autoend
+from Oneforall import app
+from Oneforall.core.call import Hotty, autoend
+from Oneforall.utils.database import get_client, is_active_chat, is_autoend
 
 
 async def auto_leave():
     if config.AUTO_LEAVING_ASSISTANT:
         while not await asyncio.sleep(900):
-            from Oneforall .core.userbot import assistants
+            from Oneforall.core.userbot import assistants
 
             for num in assistants:
                 client = await get_client(num)

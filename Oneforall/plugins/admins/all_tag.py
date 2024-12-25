@@ -1,12 +1,9 @@
 import asyncio
-import random
-from pyrogram import Client, filters
-from pyrogram.enums import ChatType, ChatMemberStatus
-from pyrogram.errors import UserNotParticipant
-from pyrogram.types import ChatPermissions
-from Oneforall  import app
-from Oneforall .utils.branded_ban import admin_filter
 
+from pyrogram import filters
+
+from Oneforall import app
+from Oneforall.utils.branded_ban import admin_filter
 
 SPAM_CHATS = []
 

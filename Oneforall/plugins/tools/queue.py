@@ -6,13 +6,13 @@ from pyrogram.errors import FloodWait
 from pyrogram.types import CallbackQuery, InputMediaPhoto, Message
 
 import config
-from Oneforall  import app
-from Oneforall .misc import db
-from Oneforall .utils import HottyBin, get_channeplayCB, seconds_to_min
-from Oneforall .utils.database import get_cmode, is_active_chat, is_music_playing
-from Oneforall .utils.decorators.language import language, languageCB
-from Oneforall .utils.inline import queue_back_markup, queue_markup
 from config import BANNED_USERS
+from Oneforall import app
+from Oneforall.misc import db
+from Oneforall.utils import HottyBin, get_channeplayCB, seconds_to_min
+from Oneforall.utils.database import get_cmode, is_active_chat, is_music_playing
+from Oneforall.utils.decorators.language import language, languageCB
+from Oneforall.utils.inline import queue_back_markup, queue_markup
 
 basic = {}
 

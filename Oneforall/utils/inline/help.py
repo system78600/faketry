@@ -2,9 +2,8 @@ from typing import Union
 
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
-from Oneforall  import app
+from Oneforall import app
 
-    
 
 def help_pannel(_, START: Union[bool, int] = None):
     first = [InlineKeyboardButton(text=_["CLOSE_BUTTON"], callback_data=f"close")]
@@ -16,7 +15,8 @@ def help_pannel(_, START: Union[bool, int] = None):
         InlineKeyboardButton(
             text=_["BACK_BUTTON"],
             callback_data=f"settingsback_helper",
-        ),InlineKeyboardButton(
+        ),
+        InlineKeyboardButton(
             text=_["NEXT_PAGE"],
             callback_data=f"mbot_cb",
         ),
@@ -108,7 +108,8 @@ def help_pannel(_, START: Union[bool, int] = None):
                     callback_data="help_callback hb21",
                 ),
             ],
-            [   InlineKeyboardButton(
+            [
+                InlineKeyboardButton(
                     text=_["H_B_27"],
                     callback_data="help_callback hb18",
                 ),

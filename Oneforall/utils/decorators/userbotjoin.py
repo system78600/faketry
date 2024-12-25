@@ -8,10 +8,11 @@ from pyrogram.errors import (
     UserNotParticipant,
 )
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
-from pyrogram import Client, filters
-from Oneforall  import YouTube, app
-from Oneforall .misc import SUDOERS
-from Oneforall .utils.database import (
+
+from config import SUPPORT_CHAT
+from Oneforall import app
+from Oneforall.misc import SUDOERS
+from Oneforall.utils.database import (
     get_assistant,
     get_cmode,
     get_lang,
@@ -20,8 +21,6 @@ from Oneforall .utils.database import (
     is_active_chat,
     is_maintenance,
 )
-from Oneforall .utils.inline import botplaylist_markup
-from config import PLAYLIST_IMG_URL, SUPPORT_CHAT, adminlist
 from strings import get_string
 
 links = {}

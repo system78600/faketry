@@ -1,12 +1,12 @@
 from pyrogram import filters
 from pyrogram.types import Message
 
-from Oneforall  import YouTube, app
-from Oneforall .core.call import Hotty
-from Oneforall .misc import db
-from Oneforall .utils import AdminRightsCheck, seconds_to_min
-from Oneforall .utils.inline import close_markup
 from config import BANNED_USERS
+from Oneforall import YouTube, app
+from Oneforall.core.call import Hotty
+from Oneforall.misc import db
+from Oneforall.utils import AdminRightsCheck, seconds_to_min
+from Oneforall.utils.inline import close_markup
 
 
 @app.on_message(

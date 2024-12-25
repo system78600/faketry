@@ -1,9 +1,9 @@
 from pyrogram import filters
 from pyrogram.types import Message
 
-from Oneforall  import app
 from config import OWNER_ID
-from Oneforall .utils.database import (
+from Oneforall import app
+from Oneforall.utils.database import (
     get_lang,
     is_maintenance,
     maintenance_off,

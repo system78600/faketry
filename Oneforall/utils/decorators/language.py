@@ -1,6 +1,6 @@
+from Oneforall.misc import SUDOERS
+from Oneforall.utils.database import get_lang, is_maintenance
 from strings import get_string
-from Oneforall .misc import SUDOERS
-from Oneforall .utils.database import (get_lang, is_maintenance)
 
 
 def language(mystic):

@@ -1,7 +1,8 @@
 import os
 import re
+
 import yt_dlp
-from pyrogram import Client, filters
+from pyrogram import filters
 from pyrogram.types import (
     CallbackQuery,
     InlineKeyboardButton,
@@ -11,17 +12,14 @@ from pyrogram.types import (
     Message,
 )
 
-from config import (
-    BANNED_USERS,
-    SONG_DOWNLOAD_DURATION,
-    SONG_DOWNLOAD_DURATION_LIMIT,
-)
-from Oneforall  import YouTube, app
-from Oneforall .utils.decorators.language import language, languageCB
-from Oneforall .utils.formatters import convert_bytes
-from Oneforall .utils.inline.song import song_markup
+from config import BANNED_USERS, SONG_DOWNLOAD_DURATION, SONG_DOWNLOAD_DURATION_LIMIT
+from Oneforall import YouTube, app
+from Oneforall.utils.decorators.language import language, languageCB
+from Oneforall.utils.formatters import convert_bytes
+from Oneforall.utils.inline.song import song_markup
 
 # Song Module
+
 
 @app.on_message(filters.command(["song"]))
 @language
@@ -43,9 +41,7 @@ async def song_commad_private(client, message: Message, _):
             return await mystic.edit_text(_["song_3"])
         if int(duration_sec) > SONG_DOWNLOAD_DURATION_LIMIT:
             return await mystic.edit_text(
-                _["play_4"].format(
-                    SONG_DOWNLOAD_DURATION, duration_min
-                )
+                _["play_4"].format(SONG_DOWNLOAD_DURATION, duration_min)
             )
         buttons = song_markup(_, vidid)
         await mystic.delete()
@@ -83,6 +79,7 @@ async def song_commad_private(client, message: Message, _):
         reply_markup=InlineKeyboardMarkup(buttons),
     )
 
+
 @app.on_callback_query(filters.regex(pattern=r"song_back") & ~BANNED_USERS)
 @languageCB
 async def songs_back_helper(client, callback_query: CallbackQuery, _):
@@ -93,6 +90,7 @@ async def songs_back_helper(client, callback_query: CallbackQuery, _):
     await callback_query.edit_message_reply_markup(
         reply_markup=InlineKeyboardMarkup(buttons)
     )
+
 
 @app.on_callback_query(filters.regex(pattern=r"song_helper") & ~BANNED_USERS)
 @languageCB
@@ -106,9 +104,7 @@ async def song_helper_cb(client, callback_query: CallbackQuery, _):
         pass
     if stype == "audio":
         try:
-            formats_available, link = await YouTube.formats(
-                vidid, True
-            )
+            formats_available, link = await YouTube.formats(vidid, True)
         except:
             return await callback_query.edit_message_text(_["song_7"])
         keyboard = InlineKeyboardMarkup(inline_keyboard=[])
@@ -139,20 +135,13 @@ async def song_helper_cb(client, callback_query: CallbackQuery, _):
                     text=_["BACK_BUTTON"],
                     callback_data=f"song_back {stype}|{vidid}",
                 ),
-                InlineKeyboardButton(
-                    text=_["CLOSE_BUTTON"],
-                    callback_data=f"close"
-                ),
+                InlineKeyboardButton(text=_["CLOSE_BUTTON"], callback_data=f"close"),
             ]
         )
-        await callback_query.edit_message_reply_markup(
-            reply_markup=keyboard
-        )
+        await callback_query.edit_message_reply_markup(reply_markup=keyboard)
     else:
         try:
-            formats_available, link = await YouTube.formats(
-                vidid, True
-            )
+            formats_available, link = await YouTube.formats(vidid, True)
         except Exception as e:
             print(e)
             return await callback_query.edit_message_text(_["song_7"])
@@ -181,23 +170,18 @@ async def song_helper_cb(client, callback_query: CallbackQuery, _):
                     text=_["BACK_BUTTON"],
                     callback_data=f"song_back {stype}|{vidid}",
                 ),
-                InlineKeyboardButton(
-                    text=_["CLOSE_BUTTON"],
-                    callback_data=f"close"
-                ),
+                InlineKeyboardButton(text=_["CLOSE_BUTTON"], callback_data=f"close"),
             ]
         )
-        await callback_query.edit_message_reply_markup(
-            reply_markup=keyboard
-        )
+        await callback_query.edit_message_reply_markup(reply_markup=keyboard)
+
 
 # Downloading Songs Here
 
-@app.on_callback_query(
-    filters.regex(pattern=r"song_download") & ~BANNED_USERS
-)
+
+@app.on_callback_query(filters.regex(pattern=r"song_download") & ~BANNED_USERS)
 @languageCB
-async def song_download_cb(client, callback_query: CallbackQuery, _) :
+async def song_download_cb(client, callback_query: CallbackQuery, _):
     try:
         await callback_query.answer("ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ...")
     except:

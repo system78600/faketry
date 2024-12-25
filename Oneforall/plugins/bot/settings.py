@@ -5,13 +5,14 @@ from pyrogram.types import (
     CallbackQuery,
     InlineKeyboardButton,
     InlineKeyboardMarkup,
-    Message,
     InputMediaPhoto,
     InputMediaVideo,
+    Message,
 )
 
-from Oneforall  import app
-from Oneforall .utils.database import (
+from config import BANNED_USERS, OWNER_ID, START_IMG_URL
+from Oneforall import app
+from Oneforall.utils.database import (
     add_nonadmin_chat,
     get_authuser,
     get_authuser_names,
@@ -27,16 +28,15 @@ from Oneforall .utils.database import (
     skip_off,
     skip_on,
 )
-from Oneforall .utils.decorators.admins import ActualAdminCB
-from Oneforall .utils.decorators.language import language, languageCB
-from Oneforall .utils.inline.settings import (
+from Oneforall.utils.decorators.admins import ActualAdminCB
+from Oneforall.utils.decorators.language import language, languageCB
+from Oneforall.utils.inline.settings import (
     auth_users_markup,
     playmode_users_markup,
     setting_markup,
     vote_mode_markup,
 )
-from Oneforall .utils.inline.start import private_panel
-from config import BANNED_USERS, OWNER_ID, MUSIC_BOT_NAME, START_IMG_URL
+from Oneforall.utils.inline.start import private_panel
 
 
 @app.on_message(
@@ -50,6 +50,7 @@ async def settings_mar(client, message: Message, _):
         reply_markup=InlineKeyboardMarkup(buttons),
     )
 
+
 @app.on_callback_query(filters.regex("gib_source") & ~BANNED_USERS)
 @languageCB
 async def gib_repo(client, CallbackQuery, _):
@@ -60,9 +61,8 @@ async def gib_repo(client, CallbackQuery, _):
         ),
     )
 
-@app.on_callback_query(
-    filters.regex("settings_helper") & ~BANNED_USERS
-)
+
+@app.on_callback_query(filters.regex("settings_helper") & ~BANNED_USERS)
 @languageCB
 async def settings_cb(client, CallbackQuery, _):
     try:
@@ -94,7 +94,8 @@ async def settings_back_markup(client, CallbackQuery: CallbackQuery, _):
             InputMediaPhoto(
                 media=START_IMG_URL,
                 caption=_["start_2"].format(
-                    CallbackQuery.from_user.first_name, app.mention),
+                    CallbackQuery.from_user.first_name, app.mention
+                ),
             ),
             reply_markup=InlineKeyboardMarkup(buttons),
         )

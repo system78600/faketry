@@ -1,8 +1,8 @@
 from pyrogram import filters
 from pyrogram.types import Message
 
-from Oneforall  import app
-from Oneforall .core.call import Hotty
+from Oneforall import app
+from Oneforall.core.call import Hotty
 
 welcome = 20
 close = 30

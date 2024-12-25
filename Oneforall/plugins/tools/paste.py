@@ -7,10 +7,9 @@ from pykeyboard import InlineKeyboard
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardButton
 
-from aiohttp import ClientSession
-from Oneforall  import app
-from Oneforall .utils.errors import capture_err
-from Oneforall .utils.pastebin import HottyBin
+from Oneforall import app
+from Oneforall.utils.errors import capture_err
+from Oneforall.utils.pastebin import HottyBin
 
 pattern = re.compile(r"^text/|json$|yaml$|xml$|toml$|x-sh$|x-shellscript$")
 
@@ -49,13 +48,15 @@ async def paste_func(_, message):
             content = await f.read()
         os.remove(doc)
     link = await HottyBin(content)
-    preview = link 
+    preview = link
     button = InlineKeyboard(row_width=1)
     button.add(InlineKeyboardButton(text="• ᴘᴀsᴛᴇ ʟɪɴᴋ •", url=link))
 
     await m.delete()
     try:
-        await message.reply("ʜᴇʀᴇ ɪs ʏᴏᴜʀ ᴘᴀsᴛᴇ ʟɪɴᴋ :", quote=False, reply_markup=button)
-        
+        await message.reply(
+            "ʜᴇʀᴇ ɪs ʏᴏᴜʀ ᴘᴀsᴛᴇ ʟɪɴᴋ :", quote=False, reply_markup=button
+        )
+
     except Exception:
         pass

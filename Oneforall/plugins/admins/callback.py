@@ -3,31 +3,6 @@ import asyncio
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
-from Oneforall  import YouTube, app
-from Oneforall .core.call import Hotty
-from Oneforall .misc import SUDOERS, db
-from Oneforall .utils.database import (
-    get_active_chats,
-    get_lang,
-    get_upvote_count,
-    is_active_chat,
-    is_music_playing,
-    is_nonadmin_chat,
-    music_off,
-    music_on,
-    set_loop,
-)
-from Oneforall .utils.decorators.language import languageCB
-from Oneforall .utils.formatters import seconds_to_min
-from Oneforall .utils.inline import (
-    close_markup,
-    stream_markup,
-    stream_markup2, 
-    stream_markup_timer,
-    stream_markup_timer2,
-)
-from Oneforall .utils.stream.autoclear import auto_clean
-from Oneforall .utils.thumbnails import get_thumb
 from config import (
     BANNED_USERS,
     SOUNCLOUD_IMG_URL,
@@ -38,6 +13,31 @@ from config import (
     confirmer,
     votemode,
 )
+from Oneforall import YouTube, app
+from Oneforall.core.call import Hotty
+from Oneforall.misc import SUDOERS, db
+from Oneforall.utils.database import (
+    get_active_chats,
+    get_lang,
+    get_upvote_count,
+    is_active_chat,
+    is_music_playing,
+    is_nonadmin_chat,
+    music_off,
+    music_on,
+    set_loop,
+)
+from Oneforall.utils.decorators.language import languageCB
+from Oneforall.utils.formatters import seconds_to_min
+from Oneforall.utils.inline import (
+    close_markup,
+    stream_markup,
+    stream_markup2,
+    stream_markup_timer,
+    stream_markup_timer2,
+)
+from Oneforall.utils.stream.autoclear import auto_clean
+from Oneforall.utils.thumbnails import get_thumb
 from strings import get_string
 
 checker = {}
@@ -314,9 +314,11 @@ async def del_back_playlist(client, CallbackQuery, _):
             if videoid == "telegram":
                 button = stream_markup2(_, chat_id)
                 run = await CallbackQuery.message.reply_photo(
-                    photo=TELEGRAM_AUDIO_URL
-                    if str(streamtype) == "audio"
-                    else TELEGRAM_VIDEO_URL,
+                    photo=(
+                        TELEGRAM_AUDIO_URL
+                        if str(streamtype) == "audio"
+                        else TELEGRAM_VIDEO_URL
+                    ),
                     caption=_["stream_1"].format(
                         config.SUPPORT_CHAT, title[:23], duration, user
                     ),
@@ -327,9 +329,11 @@ async def del_back_playlist(client, CallbackQuery, _):
             elif videoid == "soundcloud":
                 button = stream_markup2(_, chat_id)
                 run = await CallbackQuery.message.reply_photo(
-                    photo=SOUNCLOUD_IMG_URL
-                    if str(streamtype) == "audio"
-                    else TELEGRAM_VIDEO_URL,
+                    photo=(
+                        SOUNCLOUD_IMG_URL
+                        if str(streamtype) == "audio"
+                        else TELEGRAM_VIDEO_URL
+                    ),
                     caption=_["stream_1"].format(
                         config.SUPPORT_CHAT, title[:23], duration, user
                     ),

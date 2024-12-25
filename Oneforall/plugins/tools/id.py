@@ -1,6 +1,7 @@
-from Oneforall  import app
 from pyrogram import filters
 from pyrogram.enums import ParseMode
+
+from Oneforall import app
 
 
 @app.on_message(filters.command("me"))
@@ -65,4 +66,3 @@ async def getid(client, message):
         disable_web_page_preview=True,
         parse_mode=ParseMode.DEFAULT,
     )
-    

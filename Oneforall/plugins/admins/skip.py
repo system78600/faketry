@@ -2,15 +2,15 @@ from pyrogram import filters
 from pyrogram.types import InlineKeyboardMarkup, Message
 
 import config
-from Oneforall  import YouTube, app
-from Oneforall .core.call import Hotty
-from Oneforall .misc import db
-from Oneforall .utils.database import get_loop
-from Oneforall .utils.decorators import AdminRightsCheck
-from Oneforall .utils.inline import close_markup, stream_markup, stream_markup2
-from Oneforall .utils.stream.autoclear import auto_clean
-from Oneforall .utils.thumbnails import get_thumb
 from config import BANNED_USERS
+from Oneforall import YouTube, app
+from Oneforall.core.call import Hotty
+from Oneforall.misc import db
+from Oneforall.utils.database import get_loop
+from Oneforall.utils.decorators import AdminRightsCheck
+from Oneforall.utils.inline import close_markup, stream_markup, stream_markup2
+from Oneforall.utils.stream.autoclear import auto_clean
+from Oneforall.utils.thumbnails import get_thumb
 
 
 @app.on_message(
@@ -192,9 +192,11 @@ async def skip(cli, message: Message, _, chat_id):
         if videoid == "telegram":
             button = stream_markup2(_, chat_id)
             run = await message.reply_photo(
-                photo=config.TELEGRAM_AUDIO_URL
-                if str(streamtype) == "audio"
-                else config.TELEGRAM_VIDEO_URL,
+                photo=(
+                    config.TELEGRAM_AUDIO_URL
+                    if str(streamtype) == "audio"
+                    else config.TELEGRAM_VIDEO_URL
+                ),
                 caption=_["stream_1"].format(
                     config.SUPPORT_CHAT, title[:23], check[0]["dur"], user
                 ),
@@ -205,9 +207,11 @@ async def skip(cli, message: Message, _, chat_id):
         elif videoid == "soundcloud":
             button = stream_markup(_, chat_id)
             run = await message.reply_photo(
-                photo=config.SOUNCLOUD_IMG_URL
-                if str(streamtype) == "audio"
-                else config.TELEGRAM_VIDEO_URL,
+                photo=(
+                    config.SOUNCLOUD_IMG_URL
+                    if str(streamtype) == "audio"
+                    else config.TELEGRAM_VIDEO_URL
+                ),
                 caption=_["stream_1"].format(
                     config.SUPPORT_CHAT, title[:23], check[0]["dur"], user
                 ),

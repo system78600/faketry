@@ -4,9 +4,9 @@ import speedtest
 from pyrogram import filters
 from pyrogram.types import Message
 
-from Oneforall  import app
-from Oneforall .misc import SUDOERS
-from Oneforall .utils.decorators.language import language
+from Oneforall import app
+from Oneforall.misc import SUDOERS
+from Oneforall.utils.decorators.language import language
 
 
 def testspeed(m, _):

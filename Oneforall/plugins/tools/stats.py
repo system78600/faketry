@@ -9,14 +9,19 @@ from pyrogram.types import InputMediaPhoto, Message
 from pytgcalls.__version__ import __version__ as pytgver
 
 import config
-from Oneforall  import app
-from Oneforall .core.userbot import assistants
-from Oneforall .misc import SUDOERS, mongodb
-from Oneforall .plugins import ALL_MODULES
-from Oneforall .utils.database import get_served_chats, get_served_users, get_sudoers, get_queries
-from Oneforall .utils.decorators.language import language, languageCB
-from Oneforall .utils.inline.stats import back_stats_buttons, stats_buttons
 from config import BANNED_USERS
+from Oneforall import app
+from Oneforall.core.userbot import assistants
+from Oneforall.misc import SUDOERS, mongodb
+from Oneforall.plugins import ALL_MODULES
+from Oneforall.utils.database import (
+    get_queries,
+    get_served_chats,
+    get_served_users,
+    get_sudoers,
+)
+from Oneforall.utils.decorators.language import language, languageCB
+from Oneforall.utils.inline.stats import back_stats_buttons, stats_buttons
 
 
 @app.on_message(filters.command(["stats", "gstats"]) & filters.group & ~BANNED_USERS)

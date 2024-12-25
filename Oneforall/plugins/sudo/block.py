@@ -1,12 +1,12 @@
 from pyrogram import filters
 from pyrogram.types import Message
 
-from Oneforall  import app
-from Oneforall .misc import SUDOERS
-from Oneforall .utils.database import add_gban_user, remove_gban_user
-from Oneforall .utils.decorators.language import language
-from Oneforall .utils.extraction import extract_user
 from config import BANNED_USERS
+from Oneforall import app
+from Oneforall.misc import SUDOERS
+from Oneforall.utils.database import add_gban_user, remove_gban_user
+from Oneforall.utils.decorators.language import language
+from Oneforall.utils.extraction import extract_user
 
 
 @app.on_message(filters.command(["block"]) & SUDOERS)

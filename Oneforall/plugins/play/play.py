@@ -6,23 +6,23 @@ from pyrogram.types import InlineKeyboardMarkup, InputMediaPhoto, Message
 from pytgcalls.exceptions import NoActiveGroupCall
 
 import config
-from Oneforall  import Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app
-from Oneforall .core.call import Hotty
-from Oneforall .utils import seconds_to_min, time_to_seconds
-from Oneforall .utils.channelplay import get_channeplayCB
-from Oneforall .utils.decorators.language import languageCB
-from Oneforall .utils.decorators.play import PlayWrapper
-from Oneforall .utils.formatters import formats
-from Oneforall .utils.inline import (
+from config import BANNED_USERS, lyrical
+from Oneforall import Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app
+from Oneforall.core.call import Hotty
+from Oneforall.utils import seconds_to_min, time_to_seconds
+from Oneforall.utils.channelplay import get_channeplayCB
+from Oneforall.utils.decorators.language import languageCB
+from Oneforall.utils.decorators.play import PlayWrapper
+from Oneforall.utils.formatters import formats
+from Oneforall.utils.inline import (
     botplaylist_markup,
     livestream_markup,
     playlist_markup,
     slider_markup,
     track_markup,
 )
-from Oneforall .utils.logger import play_logs
-from Oneforall .utils.stream.stream import stream
-from config import BANNED_USERS, lyrical
+from Oneforall.utils.logger import play_logs
+from Oneforall.utils.stream.stream import stream
 
 
 @app.on_message(
@@ -660,4 +660,4 @@ async def slider_queries(client, CallbackQuery, _):
         )
         return await CallbackQuery.edit_message_media(
             media=med, reply_markup=InlineKeyboardMarkup(buttons)
-)
+        )

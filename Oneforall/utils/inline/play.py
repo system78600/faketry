@@ -2,8 +2,9 @@ import math
 
 from pyrogram.types import InlineKeyboardButton
 
-from Oneforall .utils.formatters import time_to_seconds
-from Oneforall  import app
+from Oneforall import app
+from Oneforall.utils.formatters import time_to_seconds
+
 
 def track_markup(_, videoid, user_id, channel, fplay):
     buttons = [
@@ -53,7 +54,7 @@ def stream_markup_timer(_, vidid, chat_id, played, dur):
     else:
         bar = "—————————◉"
     buttons = [
-         [
+        [
             InlineKeyboardButton(
                 text=f"{played} {bar} {dur}",
                 callback_data="GetTimer",
@@ -67,12 +68,8 @@ def stream_markup_timer(_, vidid, chat_id, played, dur):
             InlineKeyboardButton(text="▢", callback_data=f"ADMIN Stop|{chat_id}"),
         ],
         [
-            InlineKeyboardButton(
-                text="⛦ ᴏᴡɴᴇʀ ❥", url=f"https://t.me/PiratesMainchat"
-            ),
-            InlineKeyboardButton(
-                text="⛦ ᴄʜᴀᴛ ❥", url=f"https://t.me/PiratesBotRepo"
-            ),
+            InlineKeyboardButton(text="⛦ ᴏᴡɴᴇʀ ❥", url=f"https://t.me/PiratesMainchat"),
+            InlineKeyboardButton(text="⛦ ᴄʜᴀᴛ ❥", url=f"https://t.me/PiratesBotRepo"),
         ],
         [InlineKeyboardButton(text=_["CLOSE_BUTTON"], callback_data="close")],
     ]
@@ -89,12 +86,8 @@ def stream_markup(_, videoid, chat_id):
             InlineKeyboardButton(text="▢", callback_data=f"ADMIN Stop|{chat_id}"),
         ],
         [
-            InlineKeyboardButton(
-                text="⛦ ᴏᴡɴᴇʀ ❥", url=f"https://t.me/PiratesMainchat"
-            ),
-            InlineKeyboardButton(
-                text="⛦ ᴄʜᴀᴛ ❥", url=f"https://t.me/PiratesBotRepo"
-            ),
+            InlineKeyboardButton(text="⛦ ᴏᴡɴᴇʀ ❥", url=f"https://t.me/PiratesMainchat"),
+            InlineKeyboardButton(text="⛦ ᴄʜᴀᴛ ❥", url=f"https://t.me/PiratesBotRepo"),
         ],
         [InlineKeyboardButton(text=_["CLOSE_BUTTON"], callback_data="close")],
     ]
@@ -174,6 +167,7 @@ def slider_markup(_, videoid, user_id, query, query_type, channel, fplay):
 
 ## Telegram Markup
 
+
 def telegram_markup(_, chat_id):
     buttons = [
         [
@@ -243,15 +237,10 @@ def stream_markup2(_, chat_id):
             InlineKeyboardButton(text="‣‣I", callback_data=f"ADMIN Skip|{chat_id}"),
             InlineKeyboardButton(text="▢", callback_data=f"ADMIN Stop|{chat_id}"),
         ],
-[
-            InlineKeyboardButton(
-                text="⛦ ᴏᴡɴᴇʀ ❥", url=f"https://t.me/PiratesMainchat"
-            ),
-            InlineKeyboardButton(
-                text="⛦ ᴄʜᴀᴛ ❥", url=f"https://t.me/PiratesBotRepo"
-            ),
+        [
+            InlineKeyboardButton(text="⛦ ᴏᴡɴᴇʀ ❥", url=f"https://t.me/PiratesMainchat"),
+            InlineKeyboardButton(text="⛦ ᴄʜᴀᴛ ❥", url=f"https://t.me/PiratesBotRepo"),
         ],
-
         [
             InlineKeyboardButton(text=_["CLOSEMENU_BUTTON"], callback_data="close"),
         ],
@@ -545,4 +534,3 @@ def panel_markup_clone(_, vidid, chat_id):
     ]
 
     return buttons
-
