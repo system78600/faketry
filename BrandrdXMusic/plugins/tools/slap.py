@@ -1,13 +1,33 @@
-from pyrogram import filters
+import random
+import requests
+from pyrogram import Client, filters
+
 from BrandrdXMusic import app
-from BrandrdXMusic.utils.https import fetch  # Import the fetch function
 
-url_sfw = "https://api.waifu.pics/sfw/slap"
+sfw_actions = [
+    "waifu", "neko", "shinobu", "bully", "cry", "hug", "kiss", "lick",
+    "pat", "smug", "highfive", "nom", "bite", "slap", "wink", "poke",
+    "dance", "cringe", "blush", "happy"
+]
 
-@app.on_message(filters.command("slap"))
-async def slap(client, message):
-    # Fetch a random slap gif
-    response = await fetch.get(url_sfw)
-    result = response.json()  # Parse the JSON response
-    img = result["url"]
-    await message.reply_animation(img)
+# Dynamically create handlers for each sfw action
+for action in sfw_actions:
+    @app.on_message(filters.command(action))
+    def send_action_image(client, message, action=action):
+        try:
+            response = requests.get(f'https://api.waifu.pics/sfw/{action}')
+            response.raise_for_status()
+            image_url = response.json().get('url')
+
+            if image_url:
+                file_extension = image_url.split('.')[-1].lower()
+                if file_extension == 'gif':
+                    client.send_animation(chat_id=message.chat.id, animation=image_url)
+                else:
+                    client.send_photo(chat_id=message.chat.id, photo=image_url)
+            else:
+                message.reply("Could not retrieve any image.")
+
+        except requests.RequestException as e:
+            print(f'Error in API request: {e}')
+            message.reply("An error occurred while retrieving the image.")
