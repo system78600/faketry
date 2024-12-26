@@ -118,4 +118,3 @@ async def member_has_left(client: app, member: ChatMemberUpdated):
     else:
         # Handle the case where the user has no profile photo
         print(f"User {user.id} has no profile photo.")
-          
