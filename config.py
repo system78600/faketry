@@ -1,6 +1,4 @@
-import os
 import re
-from os import getenv
 
 from dotenv import load_dotenv
 from pyrogram import filters
@@ -53,7 +51,6 @@ AUTO_GCAST_MSG = ""
 # Get this credentials from https://developer.spotify.com/dashboard
 SPOTIFY_CLIENT_ID = "bcfe26b0ebc3428882a0b5fb3e872473"
 SPOTIFY_CLIENT_SECRET = "907c6a054c214005aeae1fd752273cc4"
-
 
 
 # Maximum limit for fetching playlist's track from youtube, spotify, apple links.
