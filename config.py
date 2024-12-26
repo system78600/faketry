@@ -10,7 +10,7 @@ API_ID = 22731333
 API_HASH = "f8f993acb1d5f51c950ba873404d9af5"
 
 # Get your token from @BotFather on Telegram.
-BOT_TOKEN = "7829763759:AAGybodD0whDeBYqyzLkrVEt9rcO3xkzKgM"
+BOT_TOKEN = "7779856865:AAGf8P_pUcl5F3yTHuymaWx_8IQYkO70I2w"
 
 # Get your mongo url from cloud.mongodb.com
 MONGO_DB_URI = "mongodb+srv://I-LOVE-PDF-BOT:I-LOVE-PDF-BOT@cluster0.c51o3a9.mongodb.net/?retryWrites=true&w=majority"
