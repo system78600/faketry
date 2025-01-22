@@ -115,6 +115,8 @@ async def start_gp(client, message: Message, _):
     )
     return await add_served_chat(message.chat.id)
 
+welcome_group = 2
+
 @app.on_message(filters.new_chat_members, group=welcome_group)
 async def welcome(client, message: Message):
     try:
