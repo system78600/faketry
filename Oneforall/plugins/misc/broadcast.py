@@ -16,12 +16,12 @@ from Oneforall.utils.database import (
 )
 from Oneforall.utils.decorators.language import language
 from Oneforall.utils.formatters import alpha_to_int
-from config import OWNER_ID
+from config import SUDOERS
 
 IS_BROADCASTING = False
 
 
-@app.on_message(filters.command("broadcast") & OWNER_ID)
+@app.on_message(filters.command("broadcast") & SUDOERS)
 @language
 async def braodcast_message(client, message, _):
     global IS_BROADCASTING
