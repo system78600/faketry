@@ -16,7 +16,7 @@ from Oneforall.utils.database import (
 )
 from Oneforall.utils.decorators.language import language
 from Oneforall.utils.formatters import alpha_to_int
-from config import SUDOERS
+from Oneforall.misc import SUDOERS
 
 IS_BROADCASTING = False
 
