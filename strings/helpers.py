@@ -153,23 +153,29 @@ HELP_15 = """
 """
 
 HELP_16 = """
-    ❖ ʜᴇʟᴘ ᴄᴏᴍᴍᴀɴᴅs sᴇᴄᴛɪᴏɴ 2 ❖
-    
-⬤ /guess ➥ ᴛᴏ ɢᴜᴇss ᴄʜᴀʀᴀᴄᴛᴇʀ (ᴏɴʟʏ ᴡᴏʀᴋs ɪɴ ɢʀᴏᴜᴘ).
-⬤ /fav ➥ ᴀᴅᴅ ʏᴏᴜʀ ғᴀᴠʀᴀᴛᴇ.
-⬤ /trade ➥ ᴛᴏ ᴛʀᴀᴅᴇ ᴄʜᴀʀᴀᴄᴛᴇʀs.
-⬤ /gift ➥ ɢɪᴠᴇ ᴀɴʏ ᴄʜᴀʀᴀᴄᴛᴇʀ ғʀᴏᴍ ʏᴏᴜʀ ᴄᴏʟʟᴇᴄᴛɪᴏɴ ᴛᴏ ᴀɴᴏᴛʜᴇʀ ᴜsᴇʀ (ᴏɴʟʏ ᴡᴏʀᴋs ɪɴ ɢʀᴏᴜᴘs).
-⬤ /collection ➥ ᴛᴏ sᴇᴇ ʏᴏᴜʀ ᴄᴏʟʟᴇᴄᴛɪᴏɴ.
-⬤ /topgroups ➥ sᴇᴇ ᴛᴏᴘ ɢʀᴏᴜᴘs, ᴘᴘʟ ɢᴜᴇssᴇs ᴍᴏsᴛ ɪɴ ᴛʜᴀᴛ ɢʀᴏᴜᴘs.
-⬤ /top ➥ ᴛᴏᴏ sᴇᴇ ᴛᴏᴘ ᴜsᴇʀs.
-⬤ /ctop ➥ ʏᴏᴜʀ ᴄʜᴀᴛ ᴛᴏᴘ.
-⬤ /changetime ➥ ᴄʜᴀɴɢᴇ ᴄʜᴀʀᴀᴄᴛᴇʀ ᴀᴘᴘᴇᴀʀ ᴛɪᴍᴇ (ᴏɴʟʏ ᴡᴏʀᴋs ɪɴ ɢʀᴏᴜᴘs).
-⬤ /waifustat ➥ TO CHECK YOUR WAIFU STATS .
-⬤ /sell ➥ TO SELL YOUR CHARACTER .
-⬤ /bonus ➥ TO USE TO FREE WAIFU CHARECTOR.
-⬤ /daily ➥ collect your daily bonus.
---------------MORE--INFO--THAN--OPEN--advance-----------.
-   """
+🛠️ ʜᴇʟᴘ sᴇᴄᴛɪᴏɴ:
+
+⬤ /start - 🤖 To start the bot  
+⬤ /guess - 🕵️ To guess a character (works only in groups)  
+⬤ /fav - ❤️ To add a favorite character  
+⬤ /trade - 🔄 To trade characters  
+⬤ /gift - 🎁 To gift a character from your collection to another user (works only in groups)  
+⬤ /collection - 📚 To view your collection  
+⬤ /topgroups - 🌐 To view top groups with the most guesses  
+⬤ /top - 🏆 To view top users  
+⬤ /ctop - 🥇 To view top users in your chat  
+⬤ /changetime - ⏱️ To change the appearance time of characters (works only in groups)  
+⬤ /upscale - 🔍 To upscale an image  
+⬤ /pp - 🌟 To search images on Google  
+⬤ /harem - 🪷 To view your collection  
+⬤ /balance - 💰 To check your balance  
+⬤ /hmode - 🎭 To filter character collections  
+⬤ /getsticker - 🖼️ To download your favorite sticker  
+⬤ /insta - 📸 To download Instagram reels  
+⬤ /myplant - 🌱 To create your plant  
+⬤ /claim - 🪙 To claim plant coins
+⬤ /request - 😍 add your favorite character
+    """
 
 HELP_17 = """
   ANY ONE WANT TO BROADCAST THAN CONTECT [GOKU](https://t.me/xeno_kakarot) AND BUY BROADCAST.
