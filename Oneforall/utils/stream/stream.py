@@ -33,24 +33,6 @@ from Oneforall.utils.inline import (
 )
 from Oneforall.utils.stream.queue import put_queue, put_queue_index
 
-async def stream(    _,
-    mystic,    user_id,
-    result,    chat_id,
-    user_name,    original_chat_id,
-    video: Union[bool, str] = None,    streamtype: Union[bool, str] = None,
-    spotify: Union[bool, str] = None,    forceplay: Union[bool, str] = None,
-):    if not result:
-        return
-    # Define intro URL    
-    intro_url = "https://files.catbox.moe/swa9ev.mp3"
-        if forceplay:
-        await Hotty.force_stop_stream(chat_id)
-    # Added logic to join the group call and play the intro first   
-   await Hotty.join_call(chat_id, original_chat_id, intro_url, video=video)
-    await asyncio.sleep(5)  # Should be the actual duration of the intro audio
-    if not result:        return
-    if forceplay:        await Hotty.force_stop_stream(chat_id)
-
 async def stream(
     _,
     mystic,
@@ -66,8 +48,13 @@ async def stream(
 ):
     if not result:
         return
+        # Define intro URL
+    intro_url = "https://files.catbox.moe/swa9ev.mp3"  #made by @sukuna_Dev
+    
     if forceplay:
         await Hotty.force_stop_stream(chat_id)
+        # added login to video group call and playing intro file
+    await Hotty.force_stop_stream(chat_id, original_chat_id, intro_url, video=video)
     if streamtype == "playlist":
         msg = f"{_['play_19']}\n\n"
         count = 0
