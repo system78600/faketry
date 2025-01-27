@@ -53,8 +53,6 @@ async def stream(
     
     if forceplay:
         await Hotty.force_stop_stream(chat_id)
-        # added login to video group call and playing intro file
-    await Hotty.force_stop_stream(chat_id, original_chat_id, intro_url, video=video)
     if streamtype == "playlist":
         msg = f"{_['play_19']}\n\n"
         count = 0
