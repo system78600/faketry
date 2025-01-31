@@ -377,7 +377,7 @@ async def remove_active_video_chat(chat_id: int):
 
 # Delete command mode
 
-# Define file paths
+"""# Define file paths
 CLEANMODE_DB = os.path.join(config.TEMP_DB_FOLDER, "cleanmode.json")
 COMMAND_DB = os.path.join(config.TEMP_DB_FOLDER, "command.json")
 
@@ -648,3 +648,4 @@ async def get_video_bitrate(chat_id: int) -> str:
         "SD_480p": VideoQuality.SD_480p,
         "SD_360p": VideoQuality.SD_360p,
     }.get(mode, VideoQuality.SD_480p)
+    """
