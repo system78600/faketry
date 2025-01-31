@@ -17,7 +17,7 @@ from typing import Dict, Union
 from Oneforall import app
 from Oneforall.misc import SUDOERS
 from Oneforall.core.mongo import mongodb
-from Oneforall.utils.error import capture_err
+from Oneforall.utils.errors import capture_err
 from Oneforall.utils.keyboard import ikb
 from Oneforall.utils.database import save_filter
 from Oneforall.utils.functions import (
