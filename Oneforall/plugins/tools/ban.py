@@ -25,7 +25,7 @@ from Oneforall.utils.functions import (
     extract_user_and_reason,
     time_converter,
 )
-from utils.permissions import adminsOnly, member_permissions
+from Oneforall.utils.permissions import adminsOnly, member_permissions
 from config import BANNED_USERS
 
 warnsdb = mongodb.warns
