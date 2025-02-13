@@ -138,7 +138,7 @@ async def kickFunc(_, message: Message):
     msg = f"""
 **ᴋɪᴄᴋᴇᴅ ᴜsᴇʀ:** {mention}
 **ᴋɪᴄᴋᴇᴅ ʙʏ:** {message.from_user.mention if message.from_user else 'ᴀɴᴏɴᴍᴏᴜs'}
-**ʀᴇᴀsᴏɴ:** {reason or 'ɴᴏ ʀᴇᴀsᴏɴ ᴘʀᴏᴠɪᴅᴇᴅ'}"""
+**ʀᴇᴀsᴏɴ:** {reason or 'ɴᴏ ʀᴇᴀsᴏɴ ᴘʀᴏᴠɪᴅᴇᴅ [](https://files.catbox.moe/8ltwv6.mp4)'}"""
     await message.chat.ban_member(user_id)
     replied_message = message.reply_to_message
     if replied_message:
@@ -189,6 +189,7 @@ async def banFunc(_, message: Message):
     msg = (
         f"**Banned User:** {mention}\n"
         f"**Banned By:** {message.from_user.mention if message.from_user else 'Anon'}\n"
+        f"**[](https://files.catbox.moe/m4rjwd.mp4)\n"
     )
     if message.command[0][0] == "s":
         await message.reply_to_message.delete()
