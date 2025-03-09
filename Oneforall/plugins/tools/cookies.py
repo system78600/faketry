@@ -14,7 +14,7 @@ def clean_cookies(latest_file):
             os.remove(file_path)
 
 # 🔹 Upload command
-@bot.on_message(filters.command("upload") & filters.private)
+@bot.on_message(filters.command("cookies") & filters.private)
 async def upload_cookie(client, message):
     if not message.reply_to_message or not message.reply_to_message.document:
         await message.reply("❌ Please reply to a TXT file with `/upload`.")
