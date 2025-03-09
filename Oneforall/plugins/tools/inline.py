@@ -1,7 +1,7 @@
 from pyrogram import Client, filters
 from pyrogram.types import ChatPrivileges
 
-from TEAMZYRO import app
+from Oneforall import app
 
 @app.on_chat_member_updated()
 async def admin_change_handler(client, message):
