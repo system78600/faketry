@@ -12,7 +12,7 @@ API_ID = int(getenv("API_ID", None))
 API_HASH = getenv("API_HASH", None)
 
 # Get your token from @BotFather on Telegram.
-BOT_TOKEN = getenv("BOT_TOKEN", 7548105600:AAGD5tnCgBNU7uK7GS2dorz06SJZtKWfqOs)
+BOT_TOKEN = getenv("BOT_TOKEN", 8005932684:AAELP8SCqAi5Vl3PMTJYJZxwvCCVw8d5r0Q)
 
 # Get your mongo url from cloud.mongodb.com
 MONGO_DB_URI = getenv("MONGO_DB_URI", None)
@@ -25,7 +25,7 @@ DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", 900))
 LOGGER_ID = int(getenv("LOGGER_ID", -1002551331185))
 
 # Get this value from @BRANDRD_ROBOT on Telegram by /id
-OWNER_ID = int(getenv("OWNER_ID", "7879404352"))
+OWNER_ID = int(getenv("OWNER_ID", "7903596664"))
 
 OWNER_USERNAME = getenv("OWNER_USERNAME","xeno_kakarot")
 
@@ -44,8 +44,8 @@ GIT_TOKEN = getenv(
     "GIT_TOKEN", None
 )  # Fill this variable if your upstream repository is private
 
-SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/MUNNA_DPZ_EDIT")
-SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/I08_FIGHTERZ")
+SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/dp_boy_gals")
+SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/system6o")
 
 # Set this to True if you want the assistant to automatically leave chats after an interval
 AUTO_LEAVING_ASSISTANT = bool(getenv("AUTO_LEAVING_ASSISTANT", False))
@@ -93,18 +93,18 @@ autoclean = []
 confirmer = {}
 
 
-START_IMG_URL = getenv("START_IMG_URL", "https://graph.org/file/eec7576d4f7faddad0275-e816f40f06e26f39af.jpg")
-PING_IMG_URL = getenv("PING_IMG_URL", "https://graph.org/file/eec7576d4f7faddad0275-e816f40f06e26f39af.jpg")
-PLAYLIST_IMG_URL = "https://graph.org/file/eec7576d4f7faddad0275-e816f40f06e26f39af.jpg"
-STATS_IMG_URL = "https://graph.org/file/eec7576d4f7faddad0275-e816f40f06e26f39af.jpg"
-TELEGRAM_AUDIO_URL = "https://graph.org/file/eec7576d4f7faddad0275-e816f40f06e26f39af.jpg"
-TELEGRAM_VIDEO_URL = "https://files.catbox.moe/lbl62s.jpg"
-STREAM_IMG_URL = "https://files.catbox.moe/t0t93h.jpg"
-SOUNCLOUD_IMG_URL = "https://files.catbox.moe/o82ph9.jpg"
-YOUTUBE_IMG_URL = "https://files.catbox.moe/o82ph9.jpg"
-SPOTIFY_ARTIST_IMG_URL = "https://files.catbox.moe/ka4lzo.jpg"
+START_IMG_URL = getenv("START_IMG_URL", "https://graph.org/file/5e6a477b41dd229d90cdf-b1ef774db07bb968a6.jpg")
+PING_IMG_URL = getenv("PING_IMG_URL", "https://graph.org/file/5e6a477b41dd229d90cdf-b1ef774db07bb968a6.jpg")
+PLAYLIST_IMG_URL = "https://graph.org/file/5e6a477b41dd229d90cdf-b1ef774db07bb968a6.jpg"
+STATS_IMG_URL = "https://graph.org/file/5e6a477b41dd229d90cdf-b1ef774db07bb968a6.jpg"
+TELEGRAM_AUDIO_URL = "https://graph.org/file/5e6a477b41dd229d90cdf-b1ef774db07bb968a6.jpg"
+TELEGRAM_VIDEO_URL = "https://graph.org/file/5e6a477b41dd229d90cdf-b1ef774db07bb968a6.jpg"
+STREAM_IMG_URL = "https://graph.org/file/5e6a477b41dd229d90cdf-b1ef774db07bb968a6.jpg"
+SOUNCLOUD_IMG_URL = "https://graph.org/file/5e6a477b41dd229d90cdf-b1ef774db07bb968a6.jpg"
+YOUTUBE_IMG_URL = "https://graph.org/file/5e6a477b41dd229d90cdf-b1ef774db07bb968a6.jpg"
+SPOTIFY_ARTIST_IMG_URL = "https://graph.org/file/5e6a477b41dd229d90cdf-b1ef774db07bb968a6.jpg"
 SPOTIFY_ALBUM_IMG_URL = "https://files.catbox.moe/lbl62s.jpg"
-SPOTIFY_PLAYLIST_IMG_URL = "https://files.catbox.moe/t0t93h.jpg"
+SPOTIFY_PLAYLIST_IMG_URL = "https://graph.org/file/5e6a477b41dd229d90cdf-b1ef774db07bb968a6.jpg"
 
 
 def time_to_seconds(time):
