@@ -93,8 +93,8 @@ autoclean = []
 confirmer = {}
 
 
-START_IMG_URL = getenv("START_IMG_URL", "https://graph.org/file/5e6a477b41dd229d90cdf-b1ef774db07bb968a6.jpg")
-PING_IMG_URL = getenv("PING_IMG_URL", "https://graph.org/file/5e6a477b41dd229d90cdf-b1ef774db07bb968a6.jpg")
+START_IMG_URL = getenv("START_IMG_URL", "https://graph.org/file/af26fb68945a1f5ea7651-373ed739624163a4b0.jpg")
+PING_IMG_URL = getenv("PING_IMG_URL", "https://graph.org/file/af26fb68945a1f5ea7651-373ed739624163a4b0.jpg")
 PLAYLIST_IMG_URL = "https://graph.org/file/5e6a477b41dd229d90cdf-b1ef774db07bb968a6.jpg"
 STATS_IMG_URL = "https://graph.org/file/5e6a477b41dd229d90cdf-b1ef774db07bb968a6.jpg"
 TELEGRAM_AUDIO_URL = "https://graph.org/file/5e6a477b41dd229d90cdf-b1ef774db07bb968a6.jpg"
