@@ -12,7 +12,7 @@ API_ID = int(getenv("API_ID", None))
 API_HASH = getenv("API_HASH", None)
 
 # Get your token from @BotFather on Telegram.
-BOT_TOKEN = getenv("BOT_TOKEN", 7838696921:AAG7zNMLC_EFdrWzf9WHER-P3vmRqCzqAqc Token)
+BOT_TOKEN = getenv("BOT_TOKEN", 7948540351:AAHgvpsrG2cZOhv49A_el5HWMZBAzdeKmW4)
 
 # Get your mongo url from cloud.mongodb.com
 MONGO_DB_URI = getenv("MONGO_DB_URI", None)
@@ -22,10 +22,10 @@ PRIVATE_BOT_MODE = getenv("PRIVATE_BOT_MODE", None)
 DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", 900))
 
 # Chat id of a group for logging bot's activities
-LOGGER_ID = int(getenv("LOGGER_ID", --1002689253330))
+LOGGER_ID = int(getenv("LOGGER_ID", -1002543742001)
 
 # Get this value from @BRANDRD_ROBOT on Telegram by /id
-OWNER_ID = int(getenv("OWNER_ID", "6020886539"))
+OWNER_ID = int(getenv("OWNER_ID", "7903596664"))
 
 OWNER_USERNAME = getenv("OWNER_USERNAME","xeno_kakarot")
 
@@ -44,8 +44,8 @@ GIT_TOKEN = getenv(
     "GIT_TOKEN", None
 )  # Fill this variable if your upstream repository is private
 
-SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/Cricket_Arenaaa")
-SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/The_chillZzone")
+SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/dp_boy_gals")
+SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/system6o")
 
 # Set this to True if you want the assistant to automatically leave chats after an interval
 AUTO_LEAVING_ASSISTANT = bool(getenv("AUTO_LEAVING_ASSISTANT", False))
